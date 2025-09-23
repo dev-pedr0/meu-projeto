@@ -2,8 +2,9 @@
 
 import React from 'react';
 import { useEffect, useState } from "react";
+import ProjectCard from './ProjectCard';
 
-type Repo = {
+export type Repo = {
   id: number;
   name: string;
   html_url: string;
@@ -24,17 +25,7 @@ const Projects = () => {
     return (
         <div className='flex flex-col justify-center items-center sm:flex-row sm:flex-wrap sm:gap-5'>
             {repos.map((repo) => (
-                <div key={repo.id} className='mb-5 flex flex-col items-center layout !rounded-4xl max-w-2xs'>
-                    <p className='text-center text-sm mb-2'>{repo.name.toUpperCase()}</p>
-                    <img src={repo.owner.avatar_url} alt="" className='max-w-3xs rounded-4xl'/>
-                    <a href={repo.html_url}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="text-blue-600 font-semibold hover:underlines"
-                    >
-                        Acessar
-                    </a>
-                </div>
+                <ProjectCard repo={repo}/>
             ))}
         </div>
     )
