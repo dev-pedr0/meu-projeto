@@ -14,7 +14,7 @@ const Rates = ({rates}: Props) => {
   return ( 
     <div className='layout flex flex-wrap gap-6 justify-around'>
         {rates.map((rate, index) => (
-            <SkillCard index={index} rate={rate}/>
+            <SkillCard key={index} index={index} rate={rate}/>
         ))}
     </div>
   )

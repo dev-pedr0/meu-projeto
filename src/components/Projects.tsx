@@ -25,7 +25,7 @@ const Projects = () => {
     return (
         <div className='flex flex-col justify-center items-center sm:flex-row sm:flex-wrap sm:gap-5'>
             {repos.map((repo) => (
-                <ProjectCard repo={repo}/>
+                <ProjectCard key={repo.id} repo={repo}/>
             ))}
         </div>
     )

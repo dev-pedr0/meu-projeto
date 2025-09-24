@@ -6,7 +6,7 @@ import UserTeacherSection from "@/components/UserTeacherSection";
 export default function Home() {
   return (
     <div className="flex flex-col items-center">
-      <Header/>s
+      <Header/>
       <section>
         <UserTeacherSection/>
       </section>
